@@ -1,0 +1,83 @@
+Select Clause with Where clause 
+
+1) Display details of jobs where the minimum salary is greater than 10000.
+
+
+2) Display the first name and join date of the employees who joined between 2002 and 2005.
+
+3) Display first name and join date of the employees who is either IT Programmer or Sales Man.
+
+4) Display first name, salary, commission pct, and hire date for employees with salary less than 10000.
+
+5) Display job Title, the difference between minimum and maximum salaries for jobs with max salary in the range 10000 to 20000.
+
+6) Display employees where the first name or last name starts with S.
+
+7) Display details of jobs in the descending order of the title.
+
+8) Display employees who joined in the month of May.
+
+9) Display details of the employees where commission percentage is null and salary in the range 5000 to 10000 and department is 30.
+
+Join 
+
+1). Display job title, employee ID, number of days between ending date and starting date for all jobs in department 30 from job history.
+
+
+2) Display department name and manager first name.
+
+3) Display department name, manager name, and city.
+
+
+4) Display country name, city, and department name.
+
+5) Display employee name and country in which he is working.
+
+Functions 
+
+1. Display employees who joined in the month of May.
+
+2. Display first name, salary, and round the salary to thousands.
+
+3. Display first name and date of first salary of the employees.
+
+4. Display first name and experience of the employees.
+
+5. Display the length of first name for employees where last name contain character ‘b’ after 3rd position.
+
+6. Display first name in upper case and email address in lower case for employees where the first name and email address are same irrespective of the case.
+
+7. Display employees who joined in the current year.
+
+8. Display the number of days between system date and 1st January 1995.
+
+9. Display how many employees joined in each month of the current year.
+
+MySQL Aggregate function 
+
+1. Display employee ID and the date on which he ended his previous job.
+
+
+2. Display number of employees joined after 15th of the month.
+
+select with Group by 
+
+3. Display the country ID and number of cities we have in the country.
+
+4. Display average salary of employees in each department who have commission percentage.
+
+
+5. Display job ID, number of employees, sum of salary, and difference between highest salary and lowest salary of the employees of the job.
+
+
+6. Display job ID for jobs with average salary more than 10000.
+
+7. Display years in which more than 10 employees joined.
+
+8. Display departments in which more than five employees have commission percentage.
+
+9. Display department name and number of employees in the department.
+
+10. Display employee ID for employees who did more than one job in the past.
+
+
