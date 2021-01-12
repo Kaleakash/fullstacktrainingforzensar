@@ -101,3 +101,56 @@ DML Operation
 6. Display job title, employee ID, number of days between ending date and starting date for all jobs in department 30 from job history.
 
 
+		
+DDL Assignments  with Constraints 
+		
+Table ---> Customer 
+	custId, firstName,lastName,age,city, mobileNumber, dob
+		Add the Constraints 
+		custId is Primary Key 
+		firstName not null
+		age must be greater than 21
+		mobile must be unique  
+Table ----> Branch 
+		branchId, branchName, city 
+		Add the Constraints 
+		branchId is Primary Key 
+		branchName not null
+		city not null	
+Table -----> Account 
+		accountNumber, openingBalance, typeOfAccount, status,BankId,CustId
+		Add the Constraints 
+		accountNumber is primary key 
+		openingBalance must be greater than 5000
+		typeOfAccount must be saving/current
+		BankId is foreign key refer to BranchId(Primary key) Branch table 
+		CustId is foreign key refer to Customer(Primary key) Customer table 	
+Table ----> Transaction 
+		transactionId, transactionDate, MediumOfTransaction, TransactionAmount 
+		Add the Constraints 
+		transactionId is primary key 		
+Table ----> Loan 
+		LoanId, loanAmount, customerId and bankdId 
+		Add the Constraints 
+		loadId is primary key 
+		loanAmount must be +ve 
+		BankId is foreign key refer to BranchId(Primary key) Branch table
+
+
+Sub Query 
+
+1. Display details of departments managed by ‘John’.
+
+2. Display employees who did not do any job in the past.
+
+3. Display job title and average salary for employees who did a job in the past.
+
+4. Display country name, city, and number of departments where department has more than 5 employees.
+
+5. Display details of manager who manages more than 5 employees.
+
+6. Display details of current job for employees who worked as IT Programmers in the past.
+
+7. Display the details of employees drawing the highest salary in the department.
+
+8. Display third highest salary of all employees
