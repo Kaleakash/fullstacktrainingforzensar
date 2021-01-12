@@ -1,3 +1,6 @@
+
+11/01/2020
+
 Select Clause with Where clause 
 
 1) Display details of jobs where the minimum salary is greater than 10000.
@@ -79,5 +82,22 @@ select with Group by
 9. Display department name and number of employees in the department.
 
 10. Display employee ID for employees who did more than one job in the past.
+
+
+12/01/2020
+
+DML Operation 
+
+1. Change salary of employee 115 to 8000 if the existing salary is less than 6000.
+
+2. Insert a new employee into employees with all the required details.
+
+3. Delete department 20.
+
+4. Change job ID of employee 110 to IT_PROG if the employee belongs to department 10 and the existing job ID does not start with IT.
+
+5. Insert a row into departments table with manager ID 120 and location ID in any location ID for city Tokyo.
+
+6. Display job title, employee ID, number of days between ending date and starting date for all jobs in department 30 from job history.
 
 
