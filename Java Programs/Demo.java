@@ -1,35 +1,62 @@
 class Employee {
-	int id;
-	String name;
+	
+	private int id;
+	private String name;
+	private float salary;
+	
 	Employee() {
-		System.out.println("Object created...");
+		this.id = 123;
+		this.name = "Unknown";
+		this.salary = 8000;	
 	}
-	void display() {
-		System.out.println("id is "+id);
-		System.out.println("name is "+name);
+	
+	Employee(int id) {
+		this();
+		this.id = id;
+	}
+	
+	Employee(int id, String name) {
+		//this.id = id;
+		this(id);
+		this.name = name;
+	}
+	
+	Employee(int id, String name, float salary) {
+		//this.id = id;
+		//this.name = name;
+		this(id,name);
+		this.salary = salary;
+	}
+	
+	void disEmp() {
+		System.out.println("id is "+id+"Name is "+name+" Salary is "+salary);
+		System.out.println("Number of rec "+Employee.rec);
+	}
+	
+	static int rec;
+	void setRecordsDetails(int rec) {
+		Employee.rec = rec;
 	}
 }
-
+class Manager extends Employee {
+	int numberOfEmp;
+	
+	Manager(int id, String name, float salary, int numberOfEmp) {
+		super(id,name,salary);
+		this.numberOfEmp = numberOfEmp;	
+	}
+	void disMgr() {
+		System.out.println("Number of emp is "+numberOfEmp);
+	}
+}
 class Demo {
+	
 	public static void main(String args[]) {
-	Employee emp = new Employee();	
-	emp.id=100;
-	emp.name="Ravi";
-	emp.id=101;
-	emp.display();
-	Employee employees[]=new Employee[100];	// employees can hold 100 reference of type Employee 
+	int record=10;
+	Manager mgr = new Manager(1,"Ravi",45000,5);
+	mgr.setRecordsDetails(record);
+	mgr.disEmp();
+	mgr.disMgr();
 	
-	employees[0]=new Employee();
-	employees[0].id=102;
-	employees[0].name="Ramesh";
-	employees[0].display();
-	
-	employees[1]=new Employee();
-	employees[1].id=103;
-	employees[1].name="Ramu";
-	employees[1].display();
-
-	int abc[]=new int[10];
-		
 	}
 }	 
