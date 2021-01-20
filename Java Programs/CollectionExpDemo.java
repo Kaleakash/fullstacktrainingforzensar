@@ -1,15 +1,15 @@
 import java.util.*;
 public class CollectionExpDemo {
 	public static void main(String args[]) {
-	HashMap hm = new HashMap();
-	//Hashtable hm = new Hashtable();
-	hm.put(2,"Ramesh");
-	hm.put(1,"Rajesh");
-	hm.put(4,"Lokesh");
-	hm.put(3,"Ajay");
-	hm.put(null,"Balaji");
-	hm.put(6,null);
-	System.out.println(hm);
+	List<Integer> ll = new ArrayList<Integer>();
+	ll.add(100);			// auto-boxing : converting primitive to object 
+	//ll.add("Ravi");
+	//ll.add(30.40);	
+	ll.add(200);
+	ll.add(300);
 	
+
+	int n = ll.get(0);			// auto - unboxing : converting object to primitive 
+	System.out.println(n);
 	}
 }
