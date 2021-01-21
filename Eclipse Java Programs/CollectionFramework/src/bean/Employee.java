@@ -1,19 +1,21 @@
 package bean;
 
-public class Employee implements Comparable<Employee>{
+//public class Employee implements Comparable<Employee>{
+public class Employee {
 private int id;
 private String name;
 private float salary;
-@Override
+/*@Override
 	public int compareTo(Employee o) {
 		// TODO Auto-generated method stub
 		//return this.id-o.id;		//both are equal 0, first value > second value +, first value < second value - Asc Id wise 
 		//return o.id-this.id;			// id Desc 
-	return this.name.compareTo(o.name);			//Name asc 
+	//return this.name.compareTo(o.name);			//Name asc 
+	return o.name.compareTo(this.name);			// Name desc
 	
 	}
 
-
+*/
 public int getId() {
 	return id;
 }

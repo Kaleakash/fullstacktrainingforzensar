@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import bean.Employee;
+import sort.EmployeeSortById;
 
 public class DemoTest3 {
 
@@ -18,7 +19,8 @@ public class DemoTest3 {
 		System.out.println(emp);
 	}
 	
-	Collections.sort(listOfEmp);
+	//Collections.sort(listOfEmp);													// using comparable 
+	Collections.sort(listOfEmp,new EmployeeSortById());			// using comparator 
 	System.out.println();
 	System.out.println("After Sort");
 	
