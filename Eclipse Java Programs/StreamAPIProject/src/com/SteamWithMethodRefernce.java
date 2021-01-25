@@ -13,7 +13,7 @@ public class SteamWithMethodRefernce {
 		Function<String, Integer> str1 = Integer :: parseInt;
 		System.out.println(str1.apply("100"));
 		
-		/*List<String> listOfStd = new ArrayList<>();
+	List<String> listOfStd = new ArrayList<>();
 		listOfStd.add("Ramesh"); listOfStd.add("Ajay");
 		listOfStd.add("Ajay");listOfStd.add("Vikash");
 		listOfStd.add("Mahesh"); listOfStd.add("Dinesh");
@@ -25,7 +25,7 @@ public class SteamWithMethodRefernce {
 		System.out.println();
 		System.out.println("Using Method reference");
 		//Retrieve all records using Method reference.
-		listOfStd.stream().forEach(System.out::print);*/
+		listOfStd.stream().forEach(System.out::print);
 	}
 
 }
