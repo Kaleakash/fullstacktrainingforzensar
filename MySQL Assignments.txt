@@ -50,7 +50,7 @@ Functions
 
 6. Display first name in upper case and email address in lower case for employees where the first name and email address are same irrespective of the case.
 
-7. Display employees who joined in the current year.
+7. Display employees who joined in the current year.		1990
 
 8. Display the number of days between system date and 1st January 1995.
 
@@ -154,3 +154,5 @@ Sub Query
 7. Display the details of employees drawing the highest salary in the department.
 
 8. Display third highest salary of all employees
+
+select max(salary) from employee;
