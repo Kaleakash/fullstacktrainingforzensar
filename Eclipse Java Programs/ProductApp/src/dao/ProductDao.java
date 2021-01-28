@@ -62,4 +62,34 @@ Statement stmt;
 			return 0;
 		}
 	}
+	
+	public int updateProductPrice(Product pp) {
+		try {
+			con = DbResource.getDbConnection();
+			pstmt = con.prepareStatement("update Product set price = ? where pid=?");
+			pstmt.setFloat(1, pp.getPrice());
+			pstmt.setInt(2, pp.getpId());
+			int res = pstmt.executeUpdate();
+			return res;
+		} catch (SQLException e) {
+			// TODO: handle exception
+			System.err.println("SQL Related Exception "+e);
+			return 0;
+		}
+		
+	}
+		//Display all product details where price is > ?
+		
+		public List<Product> displayProductDetailsByPrice(float price){
+			
+			System.out.println("I Came here");
+			return null;
+		}
+		
+		public String verifyUserDetails(String user,String pass) {
+			
+			return null;
+		}
+	
+	
 }

@@ -42,7 +42,7 @@ public class ProductServiceTest {
 		Product p= listOfProduct.get(0);
 		assertEquals("Computer", p.getpName());
 	}
-	@Test
+	//@Test
 	public void testStoreRecord() {
 		//System.out.println("While testing");
 		Product p = new Product();
@@ -56,4 +56,12 @@ public class ProductServiceTest {
 		assertEquals(msg, res);
 	}
 
+	@Test
+	public void testUpdateProductPrice() {
+		Product p = new Product();
+		p.setpId(105);
+		p.setPrice(540);
+		String res	= ps.updateProductPrice(p);
+		assertEquals("Price updated successfully", res);
+	}
 }

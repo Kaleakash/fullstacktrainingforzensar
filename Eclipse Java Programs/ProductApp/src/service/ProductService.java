@@ -30,6 +30,14 @@ public class ProductService {	//CRUD Operation
 			return "Record didn't store";
 		}
 	}
+	
+	public String updateProductPrice(Product pp) {
+		if(pd.updateProductPrice(pp)>0) {
+			return "Price updated successfully";
+		}else {
+			return "Product not available";
+		}
+	}
 }
 
 
