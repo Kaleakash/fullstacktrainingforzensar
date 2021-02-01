@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function display() {
+                alert("Welcome to User defined function")
+        }
+        function add(a,b){
+            var sum = a+b;
+            alert("Sum of two number is "+sum)
+        }
+        function empInfo(id,name,salary,desg){
+                if(desg==="Manager"){
+                    salary=salary+5000;
+                }else if(desg==="Programmer"){
+                    salary = salary+3000;
+                }else {
+                    salary + salary +1500;
+                }
+                return salary;
+        }
+        function sayHello() {
+            return "Welcome to My Function"
+        }
+        display();
+    </script>
+</head>
+<body>
+    
+    <script type="text/JavaScript">
+    
+    add(100,200);
+    var updatedSalary = empInfo(100,"Ramesh",25000,'Programmer');
+        alert(updatedSalary);
+        var msg = sayHello();
+        alert(msg)
+    </script>
+</body>
+</html>

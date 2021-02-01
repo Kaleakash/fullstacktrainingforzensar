@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function validate() {
+      var user = document.getElementById("user").value;
+      var pass = document.getElementById("pass").value;
+      if(user.length==0){
+        document.getElementById("e1").innerHTML="User Name is required"
+        document.getElementById("e2").innerHTML=""
+          return false;
+      }else if(pass.length==0){
+          document.getElementById("e2").innerHTML="Password is required"
+          document.getElementById("e1").innerHTML=""
+          return false;
+      }
+      else {
+          return true;
+      }
+    }
+    </script>
+</head>
+<body>
+    <p><span style="color:red;">Welcome</span> to <span style="color:green;">My</span> Web <span style="color:blue">Page</span> </p>
+    <h2>Login Page</h2>
+    <form action="home.html" method="get" onsubmit="return validate()">
+        <label for="">UserName</label>
+        <input type="text" name="user" id="user"><span id="e1" style="color:red;"></span>
+        <br/>
+        <label for="">Password</label>
+        <input type="password" name="pass" id="pass"><span id="e2" style="color:red;"></span>
+        <br/>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
