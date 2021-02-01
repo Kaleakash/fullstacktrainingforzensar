@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function backFun() {
+            alert("Hi")
+            history.back();
+        }
+        function forwardFun() {
+            history.forward();
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="back" onclick="backFun()"/>
+    <input type="button" value="forward" onclick="forwardFun()"/>
+    <br/>
+    <a href="a.html">A Page</a><br/>
+    <a href="b.html">B Page</a><br/>
+    <a href="c.html">C Page</a><br/>
+</body>
+</html>

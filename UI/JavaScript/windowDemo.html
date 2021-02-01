@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    var win;
+    function fun() {
+    win = window.open("home.html","","width=200,height=200,toolbar=yes");
+    win.document.write("This is my window data")
+    }
+    function fun1() {
+        win.close();
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="Open" onclick="fun()"/>
+    <input type="button" value="Close" onclick="fun1()"/>
+</body>
+</html>
