@@ -1,0 +1,30 @@
+body{
+ /*   background-image: url("google.png");*/
+}
+div {
+    margin: 40px;
+   display: inline-block;
+    padding: 50px;
+   /* border-width: 1px;
+    border-color:red;
+    border-style: solid;*/
+    border: solid green 1px;
+    border-radius: 50px;
+}
+
+#d1 {
+    transform: translate(200px,500px);
+    background-color: blanchedalmond;
+    opacity: 0.6;
+}
+#d2{
+   /* transform: rotateX(60deg);*/
+   transform: rotateY(120deg);
+}
+#d3 {
+   /* transform: scale(0.4,0.8);*/
+   transform: scale(2,4);
+}
+#d4 {
+    transform: skewX(40deg);
+}

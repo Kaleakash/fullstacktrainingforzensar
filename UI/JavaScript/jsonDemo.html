@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    var obj = '{"id":100,"name":"Ravi","add":{"city":"Bangalore","state":"Kar"},"skillSet":["Java","Spring","Angular"]}';       // obj consider as string data. 
+   var employees ='{"emps":[{"id":100,"name":"Ajay"},{"id":101,"name":"Vijay"}]}';
+   /*var empJsons = JSON.parse(employees);
+    var empJson = JSON.parse(obj);
+    var firstId = empJson.id;
+   var city = empJson.add.city;
+   var skillSet = empJson.skillSet[0];
+   var empFirstId = empJsons.emps[1].id;
+    document.write("id is "+firstId);
+   document.write("<br/>city is "+city);
+   document.write("<br/>Skill is "+skillSet);
+   document.write("<br/>First array emp id is  "+empFirstId);*/
+   var empJsons = JSON.parse(employees);
+   document.write(empJsons.emps.length)
+   var leng = empJsons.emps.length;
+   for(var i=0;i<leng;i++){
+       document.write("<br/>")
+       document.write("id is "+empJsons.emps[i].id+" Name is "+empJsons.emps[i].name)
+   }
+   var id = empJsons.emps[0].id;
+   document.write("<br/>")
+   empJsons.emps[0].id=105;
+   var id1 = empJsons.emps[0].id;
+   document.write("id is "+id+"Id is "+id1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+div {
+    margin: 40px;
+   display: inline-block;
+    padding: 50px;
+    border: solid green 1px;
+    border-radius: 50px; 
+    position: relative;
+}
+/*
+#d1 {
+    transition: width 10s,height 10s;
+}
+div:hover {
+    width: 300px;
+    height: 500px;
+}*/
+
+#d1 {
+    animation-name: myAnim;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: 5;
+}
+
+@keyframes myAnim {
+   /* to {background-color: green};
+    from {background-color: crimson};*/
+   /* 0% {background-color: darkcyan;}
+    25% {background-color: darkorange;}
+    50% {background-color:deeppink;}
+    75% {background-color:fuchsia;}
+    100% {background-color:khaki;}*/
+    0%  {top: 0px;}
+    25%  {top: 200px;}
+    50%  {top: 100px;}
+    75%  {top: 200px;}
+    100% {top: 0px;}
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    var i=0;
+    function display() {
+        var obj = new Date();
+        document.getElementById("info").innerHTML=obj;
+        if(i%2==0){
+            document.bgColor="red"
+        }else {
+            document.bgColor="blue"
+        }
+        i++;
+    }
+    function abc(){
+        setTimeout("display()",3000);
+    }
+    var obj;
+    function xyz(){
+        obj = setInterval("display()",1000);
+    }
+    function mno() {
+        clearInterval(obj);
+    }
+    
+    </script>
+</head>
+
+<body>
+    <input type="button" value="call display" onclick="display()"/>
+    <input type="button" value="setTimeout" onclick="abc()"/>
+    <input type="button" value="setInterval" onclick="xyz()"/>
+    <input type="button" value="clearInterval" onclick="mno()"/>
+    <div id="info">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+    //Creating user defined object using literal style. 
+    let emp = {id:100,name:"Ravi Kumar",salary:24000,add:{city:"Bangalore","State":"Karnata"}};
+    document.write(emp.id+"<br>")
+    document.write(emp.add.city+"<br>")
+
+    let empString = JSON.stringify(emp);        // converting emp object into string 
+    document.write(empString.id)
+    let empJson = JSON.parse(empString);        // converting string to json object format. 
+    document.write("<br/>")
+    document.write(empJson.id)
+    </script>
+</body>
+</html>

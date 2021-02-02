@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    //object : any real world entity 
+    function Person() {     //it is a function itself behave like a class as well as contructor 
+            var name = "Ravi";      //Name is normal local variable not a part of Person object. 
+            this.pid =100;          //pid is a instance variable part of person object.
+
+            function dis() {           //normal function but not a part of Person object. 
+                alert("Hello");
+            }
+
+            this.info = function() {    // this function is a part of Person object. 
+                alert("This is person funtion or behaviour ")
+            }
+    }        
+    let p = new Person();
+    alert(p.name)
+    alert(p.pid)
+   // p.dis();
+   p.info();
+   p.age =21;           // run time added the age property.
+   alert(p.age);
+   p.info1 = function() {
+       alert("The age is "+this.age);       //run time added info1 function 
+   }
+
+   p.info1();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

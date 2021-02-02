@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function display() {
+        alert("Hello")
+    }
+    function abc() {
+        setTimeout('display()',5000);       //asynchronouse 
+       // display();
+        alert("abc function")
+    }
+    function xyz() {
+       // setInterval('display()',2000);
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="Call Function " onclick="display()"/>
+    <input type="button" value="setTimeout" onclick="abc()"/>
+    <input type="button" value="setInterval" onclick="xyz()"/>
+</body>
+</html>
