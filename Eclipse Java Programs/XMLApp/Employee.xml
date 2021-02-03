@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Employees xmlns:tns="http://www.example.org/Employee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Employee src/Employee.xsd ">
+  <tns:Emp>
+    <tns:FirstName>Ravi</tns:FirstName>
+    <tns:LastName>Kumar</tns:LastName>
+    <tns:age>21</tns:age>
+  </tns:Emp>
+  <tns:Emp>
+    <tns:FirstName></tns:FirstName>
+   
+    <tns:age>0</tns:age>
+  </tns:Emp>
+</tns:Employees>

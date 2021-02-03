@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Employee" xmlns:tns="http://www.example.org/Employee" elementFormDefault="qualified">
+
+<element name="Employees">
+<complexType>
+	<sequence>
+		<element name="Emp" minOccurs="2" maxOccurs="4">
+			<complexType>
+				<all>
+				<element name="FirstName" type="string"></element>
+				<element name="LastName" type="string" minOccurs="0" maxOccurs="1"></element>
+				<element name="age" type="int"></element>
+				</all>
+			</complexType>
+		</element>
+	</sequence>
+</complexType>
+</element>
+
+</schema>

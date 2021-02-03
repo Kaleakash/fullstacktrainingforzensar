@@ -1,17 +1,19 @@
 <Employees>
 	<Emp>
+		<Salary>23000</Salary>
 		<Id>100</Id>
 		<Name LName='Kumar' age="21">Ravi</Name>
-		<Salary>23000</Salary>
+		
 	</Emp>
 	<Emp>
 		<Id>101</Id>
 		<Name age ="35" LName="Patil">Ramesh</Name>
 		<Salary>25000</Salary>
+		<Salary>25000</Salary>
+		<Salary>25000</Salary>
 	</Emp>
 	<Emp>
-		<Id>102</Id>
 		<Name LName="Patel">Raju</Name>
-		<Salary>26000</Salary>
+		<Salary>26000a</Salary>
 	</Emp>
 </Employees>
