@@ -3,6 +3,7 @@ package com;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,12 +30,26 @@ public class Demo extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		//String variableName = request.getParameter("textfieldName");
-		String name = request.getParameter("user");
+		PrintWriter pw = response.getWriter();
+			/*			int id = Integer.parseInt(request.getParameter("empId"))
+			 * 		String name = request.getParameter("name");
+			 * 		
+			 */
+	//	String hobbies[] = request.getParameterValues("hh");   // checkbox 
 		
-		System.out.println("Welcome to SErvlet ");
-		PrintWriter pw = response.getWriter();	 
-		pw.println("Welcome user"+ name);
-		//pw.println("<font color='red'>Welcome to Servlet Program"+name+" </font>");
+		RequestDispatcher rd1 = request.getRequestDispatcher("home");
+		RequestDispatcher rd2 = request.getRequestDispatcher("login.html");
+		
+		String name = request.getParameter("user");
+		String pass = request.getParameter("pass");
+		if(name.equals("Ramesh") && pass.equals("123")) {
+				pw.println("Successfully Login");
+				rd1.forward(request, response);
+		}else {
+			pw.println("Failure try once again");
+			rd2.include(request, response);
+		}
+		
 	}
 
 }
