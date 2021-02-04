@@ -52,4 +52,23 @@ public class Demo extends HttpServlet {
 		
 	}
 
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		PrintWriter pw = response.getWriter();
+		RequestDispatcher rd1 = request.getRequestDispatcher("home");
+		RequestDispatcher rd2 = request.getRequestDispatcher("login.html");
+		
+		String name = request.getParameter("user");
+		String pass = request.getParameter("pass");
+		if(name.equals("Ramesh") && pass.equals("123")) {
+				pw.println("Successfully Login");
+				rd1.forward(request, response);
+		}else {
+			pw.println("Failure try once again in post method");
+			rd2.include(request, response);
+		}
+	}
+	
+	
 }
