@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="SimpleWebProject" path="/SimpleWebProject" reloadable="true" source="org.eclipse.jst.jee.server:SimpleWebProject"/><Context docBase="ServletConfigAndServletContext" path="/ServletConfigAndServletContext" reloadable="true" source="org.eclipse.jst.jee.server:ServletConfigAndServletContext"/><Context docBase="SessionManagement" path="/SessionManagement" reloadable="true" source="org.eclipse.jst.jee.server:SessionManagement"/><Context docBase="JSPAppDemo" path="/JSPAppDemo" reloadable="true" source="org.eclipse.jst.jee.server:JSPAppDemo"/><Context docBase="ScopeObject" path="/ScopeObject" reloadable="true" source="org.eclipse.jst.jee.server:ScopeObject"/></Host>
+      <Context docBase="SimpleWebProject" path="/SimpleWebProject" reloadable="true" source="org.eclipse.jst.jee.server:SimpleWebProject"/><Context docBase="ServletConfigAndServletContext" path="/ServletConfigAndServletContext" reloadable="true" source="org.eclipse.jst.jee.server:ServletConfigAndServletContext"/><Context docBase="SessionManagement" path="/SessionManagement" reloadable="true" source="org.eclipse.jst.jee.server:SessionManagement"/><Context docBase="JSPAppDemo" path="/JSPAppDemo" reloadable="true" source="org.eclipse.jst.jee.server:JSPAppDemo"/><Context docBase="ScopeObject" path="/ScopeObject" reloadable="true" source="org.eclipse.jst.jee.server:ScopeObject"/><Context docBase="MVC" path="/MVC" reloadable="true" source="org.eclipse.jst.jee.server:MVC"/></Host>
     </Engine>
   </Service>
 </Server>
