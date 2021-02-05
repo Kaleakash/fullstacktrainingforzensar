@@ -7,15 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h2>Delete Employee by Id</h2>
 <form action="EmployeeController" method="post">
 <label>EmployeeId</label>
-<input type="hidden" name="emp" value="insert"><br/>
+<input type="hidden" name="emp" value="delete">
 <input type="text" name="id"><br/>
-<label>Name</label>
-<input type="text" name="name"><br/>
-<label>Salary</label>
-<input type="text" name="salary"><br/>
-<input type="submit" value="Store Employee Info">
+<br/>
+<input type="submit" value="Delete Employee Info">
 </form>
 </body>
 </html>
