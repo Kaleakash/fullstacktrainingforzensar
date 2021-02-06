@@ -40,7 +40,9 @@ public class EmployeeController extends HttpServlet {
 		List<Employee> lisfOfRec = es.getAllEmployee();
 		HttpSession hs = request.getSession();
 		hs.setAttribute("empInfo",lisfOfRec);
-		response.sendRedirect("retreiveEmployee.jsp");		
+		response.setContentType("text/html");	// some browser default format doesn't consider. 
+		response.sendRedirect("retreiveEmployee.jsp");	
+		
 	}
 
 	/**
