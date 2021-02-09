@@ -26,7 +26,6 @@ public class DemoTest {
 		s2.setAge(23);
 		s2.setTsid(2);
 		
-		
 		List<Student> listOfStd = new ArrayList<Student>();
 		
 		listOfStd.add(s1);
