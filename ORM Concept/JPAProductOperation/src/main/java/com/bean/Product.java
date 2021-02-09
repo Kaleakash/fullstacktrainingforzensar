@@ -1,5 +1,6 @@
 package com.bean;
-
+import java.time.LocalDate;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -11,6 +12,15 @@ public class Product {
 private int pid;
 private String pname;
 private float price;
+@Column(name = "storeDate")
+private LocalDate orderDate;
+
+public LocalDate getOrderDate() {
+	return orderDate;
+}
+public void setOrderDate(LocalDate orderDate) {
+	this.orderDate = orderDate;
+}
 public int getPid() {
 	return pid;
 }
@@ -31,7 +41,8 @@ public void setPrice(float price) {
 }
 @Override
 public String toString() {
-	return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + "]";
+	return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + ", orderDate=" + orderDate + "]";
 }
+
 
 }

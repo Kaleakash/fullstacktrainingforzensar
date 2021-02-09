@@ -8,20 +8,19 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import com.bean.Product;
+import com.resource.DbResource;
 
 public class ProductDao {
 
 	public List<Product> getAllProduct() {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAProductOperation");   // Connection in JDBC 
-		EntityManager manager = emf.createEntityManager();					// Statement or PreparedStatement 
+		EntityManager manager = DbResource.getEntityManager();	// Statement or PreparedStatement 
 			Query qry	 = manager.createQuery("select p from Product p");
 			List<Product> listOfProduct = qry.getResultList();
 			return listOfProduct;
 	}
 	
 	public void storeProduct(Product pp) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAProductOperation");   // Connection in JDBC 
-		EntityManager manager = emf.createEntityManager();					// Statement or PreparedStatement 
+		EntityManager manager = DbResource.getEntityManager();	// Statement or PreparedStatement 
 			EntityTransaction tran = manager.getTransaction();
 				tran.begin();
 						manager.persist(pp);					// store the product in DB like insert query 
@@ -30,8 +29,7 @@ public class ProductDao {
 	}
 	
 	public void deleteProduct(int id) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAProductOperation");   // Connection in JDBC 
-		EntityManager manager = emf.createEntityManager();					// Statement or PreparedStatement 
+		EntityManager manager = DbResource.getEntityManager();	// Statement or PreparedStatement 
 		EntityTransaction tran = manager.getTransaction();
 		
 		Product p	= manager.find(Product.class, id);			// primary key	if record is available automatically convert record to object 
@@ -46,8 +44,7 @@ public class ProductDao {
 	}
 	
 	public void updateProduct(Product pp) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAProductOperation");   // Connection in JDBC 
-		EntityManager manager = emf.createEntityManager();					// Statement or PreparedStatement 
+		EntityManager manager = DbResource.getEntityManager();	// Statement or PreparedStatement 					// Statement or PreparedStatement 
 		EntityTransaction tran = manager.getTransaction();
 		
 		Product p	= manager.find(Product.class, pp.getPid());			// primary key

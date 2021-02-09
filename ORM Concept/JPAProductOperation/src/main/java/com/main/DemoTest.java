@@ -1,5 +1,6 @@
 package com.main;
 
+import java.time.LocalDate;
 import java.util.Iterator;
 import java.util.List;
 
@@ -12,19 +13,26 @@ public class DemoTest {
 		ProductDao pd = new ProductDao();
 
 		//Retreive All product details 
-	/*
+	
 	List<Product> listOfProduct	= pd.getAllProduct();
 	System.out.println("Number of product are "+listOfProduct.size());
-	for(Product pp:listOfProduct) {
+	/*for(Product pp:listOfProduct) {
 		System.out.println(pp);
 	}*/
+	listOfProduct.forEach(p->System.out.println(p));
 		
 		//Store Product Details 
 		/*Product p1 = new Product();
 		p1.setPid(4);
 		p1.setPname("Laptop");
 		p1.setPrice(82000);
-			pd.storeProduct(p1);*/
+		
+		LocalDate purchaseDate = LocalDate.now();
+		p1.setOrderDate(purchaseDate);
+		
+		
+		pd.storeProduct(p1);
+			*/
 		//Delete Product Details 
 		
 		//pd.deleteProduct(4);
@@ -44,12 +52,12 @@ public class DemoTest {
 		//	System.out.println(pp);
 		//}
 		
-		List<Object[]> objectInfo = pd.joinQuery();
+		/*List<Object[]> objectInfo = pd.joinQuery();
 		Iterator<Object[]> ii = objectInfo.iterator();
 		while(ii.hasNext()) {
 			Object obj[]=ii.next();
 			System.out.println("Name is "+obj[0]+" Department Name is "+obj[1]);
-		}
+		}*/
 	}
 
 }
