@@ -25,15 +25,19 @@
 <property name="city" value="Bangalore"></property>
 <property name="state" value="Kar"></property>
 </bean>
+
 <bean class="com.Address" id="add2">
 <property name="city" value="Pune"></property>
 <property name="state" value="Mh"></property>
 </bean>
-<bean class="com.Customer" id="cust">
+
+<bean class="com.Customer" id="cust" scope="singleton" autowire="byName" >
 <property name="custId" value="1122"></property>
 <property name="cname" value="Mahesh"></property>
 <property name="age" value="23"></property>
+<!-- 
 <property name="add" ref="add2"></property>
+ -->
 <property name="items">
 		<list>
 			<value>TV</value>

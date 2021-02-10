@@ -17,7 +17,12 @@ public class DemoTest {
 	 * Employee emp3 = (Employee)factory.getBean("emp3"); System.out.println(emp3);
 	 */
 	Customer cc = (Customer)factory.getBean("cust");
+	//cc.setItems(null);
 	System.out.println(cc);
+	Customer cc1 = (Customer)factory.getBean("cust");
+	//cc.setItems(null);
+	System.out.println(cc1);
 	}
 
 }
+

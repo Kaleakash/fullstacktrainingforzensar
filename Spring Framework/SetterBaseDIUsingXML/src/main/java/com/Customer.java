@@ -3,6 +3,9 @@ package com;
 import java.util.List;
 
 public class Customer {
+public Customer() {
+	System.out.println("Object created...");
+}
 private int custId;
 private String cname;
 private int age;
