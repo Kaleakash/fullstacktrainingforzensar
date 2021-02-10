@@ -12,8 +12,21 @@ public class DemoTest {
 	//BeanFactory factory = new XmlBeanFactory(res);		//using resource create the BeanFactory interface rereference. 
 	
 	BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));							
+	/*
 	Employee emp = (Employee)factory.getBean("emp1");
 	emp.display();
+	
+	Employee emp1 = (Employee)factory.getBean("emp1");
+	emp1.display();
+	
+	Employee emp2 = (Employee)factory.getBean("emp2");
+	emp2.display();
+
+	Employee emp3 = (Employee)factory.getBean("emp2");
+	emp3.display();
+	*/
+	Employee emp4 = (Employee)factory.getBean("emp3");
+	emp4.display();
 	}
 
 }

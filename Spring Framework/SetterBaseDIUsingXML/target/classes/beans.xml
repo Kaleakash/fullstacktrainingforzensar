@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+<bean class="com.Employee" id="emp1">
+	<property name="id" value="100"></property>
+	<property name="name" value="Ramesh"></property>
+	<property name="salary" value="12000"></property>
+</bean>
+
+
+<bean class="com.Employee" id="emp2">
+	<property name="id" value="101"></property>
+	<property name="salary" value="14000"></property>
+</bean>
+
+<bean class="com.Employee" id="emp3">
+	<property name="name" value="Ramesh"></property>
+	<property name="id" value="102"></property>
+	<property name="salary" value="16000"></property>
+</bean>
+
+<bean class="com.Address" id="add1">
+<property name="city" value="Bangalore"></property>
+<property name="state" value="Kar"></property>
+</bean>
+<bean class="com.Address" id="add2">
+<property name="city" value="Pune"></property>
+<property name="state" value="Mh"></property>
+</bean>
+<bean class="com.Customer" id="cust">
+<property name="custId" value="1122"></property>
+<property name="cname" value="Mahesh"></property>
+<property name="age" value="23"></property>
+<property name="add" ref="add2"></property>
+<property name="items">
+		<list>
+			<value>TV</value>
+			<value>Computer</value>
+			<value>Laptop</value>
+		</list>
+</property>
+</bean>
+
+
+
+
+
+
+
+</beans>
