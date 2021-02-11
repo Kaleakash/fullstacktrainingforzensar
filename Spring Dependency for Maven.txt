@@ -1,0 +1,44 @@
+
+   <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties> 
+
+
+<!-- Bean Factory --> 
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>5.1.10.RELEASE</version>
+</dependency>
+ 
+<!-- beans.xml -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-beans</artifactId>
+    <version>5.1.10.RELEASE</version>
+</dependency>
+
+<!-- annotation -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>5.1.10.RELEASE</version>
+</dependency>
+
+<-- Spring JDBC with Datasoure -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>5.1.10.RELEASE</version>
+</dependency>
+
+<!-- My SQL Connector -->
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.15</version>
+</dependency>
+
+
