@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -27,9 +28,9 @@ public class SimpleController {
 							return mav;
 					}
 					
-					@RequestMapping(value = "check")
+					@RequestMapping(value = "check",method = RequestMethod.POST)
 					public ModelAndView checkUser(HttpServletRequest req) {			//pull HttpServletRequest object by default get consider 
-						String user  = req.getParameter("user");
+						String user  = req.getParameter("user");								// now it is post method
 						String pass = req.getParameter("pass");
 						ModelAndView mav = new ModelAndView();
 						if(user.equals("Ajay") && pass.equals("123")) {

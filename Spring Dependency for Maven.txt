@@ -42,3 +42,9 @@
 </dependency>
 
 
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>4.2.0.RELEASE</version>
+</dependency>
