@@ -9,9 +9,9 @@
 
 <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-	<property name="url" value="jdbc:mysql://localhost:3306/mydb"></property>
+	<property name="url" value="jdbc:mysql://localhost:3306/mydb?useSSL=false"></property>
 	<property name="username" value="root"></property>
-	<property name="password" value="root"></property>
+	<property name="password" value="root"></property>	
 </bean>
 <!--  Persistence.xml is not required  -->
 <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="emf">

@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import javax.sql.DataSource;
 
@@ -50,6 +51,25 @@ public class EmployeeDao {
 		List<Employee> listOfEmp = qry.getResultList();
 		return listOfEmp;
 
+	}
+	
+	
+	public int storeEmployee(Employee emp) {
+		EntityManager manager = emf.createEntityManager();
+		EntityTransaction tran = manager.getTransaction();
+		try {
+		tran.begin();
+					manager.persist(emp);
+		tran.commit();
+		}catch(Exception e) {
+			return 2;
+		}
+		Employee e = manager.find(Employee.class, emp.getId());
+		if(e!=null) {
+			return 1;
+		}else {
+			return 0;
+		}
 	}
 }
 

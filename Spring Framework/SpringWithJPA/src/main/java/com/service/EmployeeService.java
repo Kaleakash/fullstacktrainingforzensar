@@ -18,4 +18,15 @@ public class EmployeeService {
 	public List<Employee> getAllEmployee() {
 				return employeeDao.getAllEmployee().stream().filter(emp->emp.getSalary()>13000).collect(Collectors.toList());
 	}
+	
+	public String storeEmployee(Employee emp) {
+		int res =employeeDao.storeEmployee(emp); 
+		if(res ==1) {
+			return "Successfully Stored";
+		}else if(res==2){
+			return "Exception generated";
+		}else {
+			return "Didn't inserted";
+		}
+	}
 }
