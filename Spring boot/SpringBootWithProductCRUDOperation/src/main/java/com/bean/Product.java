@@ -2,6 +2,7 @@ package com.bean;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 @Entity
@@ -10,6 +11,7 @@ public class Product {
 private int pid;
 private String pname;
 private float price;
+@Column(name = "storedate")
 private LocalDate storeDate;
 public int getPid() {
 	return pid;
