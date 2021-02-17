@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -88,6 +89,18 @@ public class EmployeeController {
 		public String deleteEmployeeInfo(@PathVariable("empId") int id) {
 			
 			return "Your record deleted successfully using the id as "+id;
+		}
+		
+		@RequestMapping(value = "GetEmpId/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
+		public ResponseEntity<List<Employee>> getMessage(@PathVariable("id") int id) {
+			Employee emp = new Employee(100,"Ramesh",15000);
+			List<Employee> list = new ArrayList<>();
+			List<Employee> list1 = new ArrayList<>();
+			if(emp!=null) {
+				return ResponseEntity.status(200).body(list);
+			}else {
+				return ResponseEntity.status(404).body(list1);
+			}
 		}
 }
 
