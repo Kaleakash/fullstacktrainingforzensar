@@ -1,0 +1,20 @@
+http://localhost:9090/product/info
+
+http://localhost:9090/product/allProduct
+
+http://localhost:9090/product/storeProduct
+{"pid":106,"pname":"Pen","price":250,"storeDate":"2021-02-17"}
+
+http://localhost:9090/product/deleteProduct/106
+
+http://localhost:9090/product/updateProduct
+{"pid":105,"price":550}
+
+
+
+Spring Data 
+
+http://localhost:9090/product/allProductData
+
+http://localhost:9090/product/storeProductData
+

@@ -15,8 +15,8 @@ import com.bean.Product;
 @Repository
 public class ProductDao {
 
-	@Autowired
-EntityManagerFactory emf;
+@Autowired
+EntityManagerFactory emf;	//DataSource ds; pure JDBC , jdbcTemplate (Spring Dao), EntityManagerFactory emf(JPA), SessionFactory sf(Hibernate), Spring data JpaRepository 
 
 		public List<Product> getAllProductDetails() {
 			EntityManager manager = emf.createEntityManager();
