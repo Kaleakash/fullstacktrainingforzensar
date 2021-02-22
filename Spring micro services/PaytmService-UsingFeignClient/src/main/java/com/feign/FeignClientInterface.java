@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "ACCOUNT-SERVICE")	//http://localhost:9393
 public interface FeignClientInterface {
 
-	@GetMapping(value = "account/balance/{accno}")	//path and with path variable 
+	@GetMapping(value = "account/balance/{accno}")	//path and with path variable http://localhost:9393/account/balance/1010
 	public String getAccountBalance(@PathVariable("accno") int accno);
 }
