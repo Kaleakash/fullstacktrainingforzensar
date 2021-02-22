@@ -24,3 +24,6 @@ public class EmployeeDepartmentController {
 					return ResponseEntity.status(200).body(details);
 	}
 }
+
+
+

@@ -1,0 +1,1 @@
+java -jar target/EurekaServer-0.0.1-SNAPSHOT.jar

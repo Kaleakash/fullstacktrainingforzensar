@@ -1,5 +1,7 @@
 package com.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +15,14 @@ public class AccountService {
 	AccountRepository accountRepository;
 	
 	public String getBalance(int accno) {
-		if(accountRepository.existsById(accno)) {
-			Account acc = accountRepository.getOne(accno);
-			return "Your Balance is "+acc.getAmount();
-		}else {
-			return "Account not present";
-		}
+			Optional<Account> op = accountRepository.findById(accno);
+			if(op.isPresent()) {
+				Account ac = op.get();
+				return "Your balance is "+ac.getAmount();
+			}else {
+				return "Account number is not present";
+			}
+		
 	}
 	
 }
