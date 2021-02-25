@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <!--
+
+    <script src="sample.js"></script>
+    -->
+    <!--
+    <script src="jquery-3.5.1.js"></script>
+    -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <h1>Welcome to HTML Web Page</h1>
+    <p class="abc">This is first para</p>
+    <p class="xyz">This is second para</p>
+    <b>This is bold tag</b>
+    <i>This is italics tags</i>
+
+    <br/>
+    <input type="button" value="click" id="b1"/><br/>
+    <script type="text/JavaScript">
+        $(document).ready(function(){
+            //alert("jquery ready...")
+            //var len = $("*").length;  
+           // var len = $("h1").length; 
+           // alert("NUmber of tags are "+len)
+           $("p.xyz").hide();
+           $("#b1").click(function() {
+               //alert("You click on button")
+               var info = $("h1").html()
+              // alert(info)
+               $("h1").html("I Change the contents from  jQuery")
+               $("h1").css({"color":"red"});
+               $("p.abc").hide();
+               $("p.xyz").toggle();
+           })
+        })
+    </script>
+</body>
+</html>

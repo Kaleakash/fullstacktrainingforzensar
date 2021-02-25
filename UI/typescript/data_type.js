@@ -1,0 +1,14 @@
+var n = 100;
+var x = 10.10;
+var fname = "Raj Deep";
+var result = true;
+var msg = "Welcome";
+console.log(n);
+console.log(x);
+console.log(fname);
+console.log(result);
+console.log(msg);
+msg = 100;
+console.log(msg);
+msg = true;
+console.log(msg);

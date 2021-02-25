@@ -1,8 +1,15 @@
 package com.bean;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value = "Employee Model Class")
 public class Employee {
+@ApiModelProperty(value = "Employee Id")
 private int id;
+@ApiModelProperty(value = "Employee Name")
 private String name;
+@ApiModelProperty(value = "Employee Salary")
 private float salary;
 public int getId() {
 	return id;

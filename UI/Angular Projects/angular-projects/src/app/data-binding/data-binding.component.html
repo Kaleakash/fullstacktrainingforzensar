@@ -1,0 +1,12 @@
+<div>
+    <h2>Data binding concept</h2>
+    <h3>Data binding using string interpolation</h3>
+    First Name is {{fname}}      <br/>
+    <h3>Data binding using property binding</h3>
+    LName : <input type="text" [value]="lname"/><br/>
+    LName is <span [innerText]="lname"></span>
+    <h3>Event binding </h3>
+    Age : {{age}}<br/>
+    <input type="button" value="change Age"
+    (click)='changeAge()'/>
+</div>

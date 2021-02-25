@@ -1,0 +1,11 @@
+server:
+  port: 9090
+  
+spring:  datasource:    driver-class-name: 
+    url: 
+    username: 
+    password: 
+  application:    name: 
+
+# YML Yet Another Markup Language Ain't Markup Language
+# boostrap.yml or bootstrap.properties / application.yml or application.properties  spring micro service 
