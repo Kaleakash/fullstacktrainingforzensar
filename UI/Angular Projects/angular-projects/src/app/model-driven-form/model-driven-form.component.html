@@ -1,0 +1,13 @@
+<div>
+    <h2>Login Page using MDF</h2>
+    <form [formGroup]="userRef" (ngSubmit)="checkUser()">
+        <label>UserName</label>
+        <input type="text" formControlName="user"/><br/>
+        <label>Password</label>
+        <input type="password" formControlName="pass"/><br/>
+        <input type="submit"/>
+        <input type="button" value="check User" (click)="checkUser()"/>
+        <input type="reset"/>
+    </form>
+    {{msg}}
+</div>

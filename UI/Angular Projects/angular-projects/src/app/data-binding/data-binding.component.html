@@ -9,4 +9,20 @@
     Age : {{age}}<br/>
     <input type="button" value="change Age"
     (click)='changeAge()'/>
+    <br/>
+    <h2>Two way binding using ngModel</h2>
+    Desg : {{desg}}<br/>
+    <input type="text" [(ngModel)]="desg"/>
+    <br/>
+    LName is {{lname}}<br/>
+    <input type="text" [value]="lname"/>
+    <br/>
+    <h2>Template REference</h2>
+    SkillSet :<input type="text" #skillSet/>
+    <input type="button" value="click Here"
+    (click)="passSkillSet(skillSet.value)"/>
+    Your Skill set {{skill}}
 </div>
+
+
+
