@@ -1,0 +1,29 @@
+<div>
+    <h3>Students names are</h3>
+    <div *ngFor="let name of names">
+            <p>{{name}}</p>
+    </div>
+
+    <h2>All Product Details are </h2>
+    
+    <input type="button" value="Load Product Data" (click)="loadData()" class="btn btn-success"/>
+    <div *ngIf="flag">
+   
+        <table border="1">
+        <tr>
+            <th>PId</th>
+            <th>PName</th>
+            <th>Price</th>
+            <th>Date</th>
+        </tr>
+        <tr *ngFor="let product of productInfo">
+                <td>{{product.pid}}</td>
+                <td>{{product.pname}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.storeDate}}</td>
+                <td> <img src="../../assets/Images/{{product.pname}}.jpg" width="200" height="200"/> </td>
+        </tr>
+    </table>
+    
+</div>
+</div>
