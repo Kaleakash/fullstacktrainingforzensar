@@ -1,0 +1,20 @@
+<div>
+    <h2>This is Product Component</h2>
+    Name is {{parentName}}
+    <br/>
+    <input type="text" #nameRef/><br/>
+    <input type="button" value="Add Names" (click)="addNames(nameRef.value)">
+    <br/>
+
+    This Child age is {{childAge}}<br/>
+
+    <hr/>
+    <app-product-item [parentNameReceive]="parentName" 
+    [namesReceive]="names"
+    (eventRef)="childAge=$event"></app-product-item>
+    <hr/>
+    <h2>Produt Details are </h2>
+    Product Id is  {{productRef.pid}}, Product Name is {{productRef.pname}}and price {{productRef.price}} 
+    
+
+</div>

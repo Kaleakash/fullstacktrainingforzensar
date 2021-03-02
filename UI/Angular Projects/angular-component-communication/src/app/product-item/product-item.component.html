@@ -1,0 +1,12 @@
+<div>
+    <h2>This is Product - Item Component</h2>
+    Parent Name is {{parentNameReceive}}
+    <br/>
+    <h3>Product Names are </h3>
+    <ul *ngFor="let name of namesReceive">
+            <li>{{name}}</li>
+    </ul>
+    <br/>
+    Age is {{age}} in Child component<br/>
+    <input type="button" value="Change Age" (click)="changeAge()"/>
+</div>
