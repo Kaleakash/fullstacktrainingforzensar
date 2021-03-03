@@ -1,0 +1,20 @@
+<div>
+  <table border="1">
+    <tr>
+      <th>EmpId</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Gender</th>
+      <th>DateInfo</th>
+      <th>Employee Info</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+      <td>{{emp.id}}</td>
+      <td>{{emp.name | uppercase | GenderPipe : emp.gender }}</td>
+      <td>{{emp.salary | currency:'INR'}}</td>
+      <td>{{emp.gender}}</td>
+      <td>{{emp.dateInfo | date:'long'}}</td>
+      <td>{{emp | json}}</td>
+    </tr>
+  </table>
+</div>

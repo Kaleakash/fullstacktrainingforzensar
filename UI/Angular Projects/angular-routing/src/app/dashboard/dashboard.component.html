@@ -1,3 +1,15 @@
 <div>
-    <h2>Welcome to Home Page</h2>
+    <div align="right">
+        <input type="button" value="logout" (click)="logout()"/>
+    </div>
+    
+    <h2>Welcome to Home Page user {{userName}}</h2>
+    <a routerLink="a">A Component</a><br/>
+    <a routerLink="b">B Component</a><br/>
+    <a routerLink="c">C Component</a><br/>
+
+    <hr/>
+    <router-outlet></router-outlet>
+
+    
 </div>

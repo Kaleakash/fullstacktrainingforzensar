@@ -9,6 +9,11 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { MyGaurds } from './app.gaurds';
+import { AComponent } from './a/a.component';
+import { BComponent } from './b/b.component';
+import { CComponent } from './c/c.component';
+import { DComponent } from './d/d.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +22,17 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ContactusComponent,
     LoginComponent,
     DashboardComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AComponent,
+    BComponent,
+    CComponent,
+    DComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,FormsModule
   ],
-  providers: [],
+  providers: [MyGaurds],        // register user defined guards 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

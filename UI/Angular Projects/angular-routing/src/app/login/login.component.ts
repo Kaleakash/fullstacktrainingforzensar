@@ -19,6 +19,12 @@ export class LoginComponent implements OnInit {
     let pass  = userRef.pass;
     if(user=="Raj" && pass=="123"){
       console.log("Successfully Login")
+      sessionStorage.setItem("name",user);    // set user name receive from database using RESTAPI
+      /*
+            1. We can store unique Id for that specific entity. 
+            2. We can store sessionId 
+            3. JWT : Json Web tooken 
+      */
       this.router.navigate(["home"])
     }else {
       console.log("Failure try once again")
