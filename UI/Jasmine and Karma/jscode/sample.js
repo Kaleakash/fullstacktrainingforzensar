@@ -1,4 +1,9 @@
 function add(a,b) {
 var sum = a+b;
-return sum
+return sum;
+}
+
+function sub(a,b){
+    var sub = a-b;
+    return sub;
 }
