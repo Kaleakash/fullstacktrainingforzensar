@@ -1,0 +1,5 @@
+FROM openjdk:alpine
+COPY Demo.java ./home/
+WORKDIR ./home
+RUN javac Demo.java
+CMD ["java","Demo"] 

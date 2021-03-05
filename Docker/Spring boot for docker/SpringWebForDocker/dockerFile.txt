@@ -1,0 +1,4 @@
+FROM openjdk:alpine
+COPY ./target/SpringWebForDocker-0.0.1-SNAPSHOT.jar ./home
+WORKDIR ./home
+CMD ["java","-jar","SpringWebForDocker-0.0.1-SNAPSHOT.jar"] 
