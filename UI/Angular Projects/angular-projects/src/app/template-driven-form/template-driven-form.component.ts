@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDrivenFormComponent implements OnInit {
   msg:string="";
+  user:string=""
   constructor() { }
 
   ngOnInit(): void {
   }
   checkUser(userInfo:any){
+    console.log("Event fired")
    // console.log(userInfo);
    let userName = userInfo.user;
    let passName = userInfo.pass;

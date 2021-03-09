@@ -1,12 +1,20 @@
 
 <div>
     <h2>Login Page - Using TDF</h2>
-    <form #userRef="ngForm" (ngSubmit)="checkUser(userRef.value)">
+    <form #loginRef="ngForm" (ngSubmit)="checkUser(loginRef.value)">
         <label>UserName</label>
-        <input type="text" name="user" ngModel/><br/>
+<input type="text" name="user" #userRef="ngModel" required minlength="4" />
+        <div *ngIf="userRef.errors && (userRef.dirty || userRef.touched)">
+                <span [hidden]="!userRef.errors.required">
+                        UserName is required
+                </span>
+        </div>
+        <br/>
         <label>Password</label>
-        <input type="password" name="pass" ngModel/><br/>
-        <input type="submit" value="submit"/>
+        
+        <input type="password" name="pass" #passRef="ngModel" required minlength="4"/>
+
+        <input type="submit" value="submit" [disabled]="!loginRef.valid"/>
         <input type="reset" value="reset"/>
     </form>
     {{msg}}
